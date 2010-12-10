@@ -1,0 +1,14 @@
+h1. Notre Dame toolbar extensions
+
+This is a collection of browser extensions.
+
+The purpose is to mimic the ND.edu Popular Sites functionality. I'm starting with the Safari version with plans to add Firefox and Chrome versions.
+
+h2. Use
+
+Nothing yet.
+
+h2. Changelog
+
+* v0.1 (2010-12-10)
+** ADD: Added Safari Extension with functional Preferences
