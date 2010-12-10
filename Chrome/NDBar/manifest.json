@@ -1,0 +1,8 @@
+{
+  "name": "ND.edu Toolbar",
+  "version": "0.1",
+  "description": "ND.edu Toolbar",
+  "toolstrips" : [
+    "ndtoolbar.html"
+  ]
+}

@@ -1,0 +1,7 @@
+content   nddotedutoolbar                 chrome/content/
+skin      nddotedutoolbar   classic/1.0   chrome/skin/
+locale    nddotedutoolbar   en-US         chrome/locale/en-US/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://nddotedutoolbar/content/ff-overlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://nddotedutoolbar/skin/overlay.css

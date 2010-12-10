@@ -1,0 +1,8 @@
+<!ENTITY nddotedutoolbar.label "ND.edu Toolbar">
+<!ENTITY nddotedutoolbarContext.label "ND.edu Toolbar">
+<!ENTITY nddotedutoolbarContext.accesskey "Y">
+<!ENTITY nddotedutoolbarToolbarButton.label "Your Toolbar Button">
+<!ENTITY nddotedutoolbarToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY nddotedutoolbarSidebar.label "Your Sidebar">
+<!ENTITY nddotedutoolbarToolbar.name  "example">
+<!ENTITY nddotedutoolbarToolbar.label "ND.edu Toolbar: ">

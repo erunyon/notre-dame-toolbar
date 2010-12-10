@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University of Notre Dame Extension Bar</title>
+  <style>
+  html,body {margin:0; padding:0;}
+  
+  #toolbar {margin:0; padding:0;}
+  #toolbar ul {margin:3px 0 0; padding:0 10px; list-style:none;}
+  #toolbar li {display:inline-block; height:16px; margin:0 6px 0 0; padding:0 0 0 19px; background-repeat:no-repeat; background-position:left 0;}
+  #toolbar li a {text-decoration:none; color:#333;}
+  #toolbar li a:hover {color:#001b35;}
+  
+  #nddotedu {background-image:url(tabicon.png);}
+  #ndgmail {background-image:url(gmail.png);}
+  #ndowa {background-image:url(owa.png);}
+  #ndaccal {background-image:url(calendar.png);}
+  #ndinsidend {background-image:url(insidend.png);}
+  #nddirectory {background-image:url(directory.png);}
+  #ndcalendar {background-image:url(calendar.png);}
+  
+  #toolbar #search {margin-left:20px;}
+  #toolbar #search label {display:none;}
+  #q {width:150px;}
+  </style>
+  <script type="text/javascript">
+  function toggleAudio() {
+    var button = document.getElementById("fight-song-button");
+    var state = button.getAttribute('data-state');
+    if(state == 'paused') {
+      document.getElementById("music").play();
+      button.value = 'Pause Victory March';
+      button.setAttribute('data-state', 'playing');
+    } else {
+      document.getElementById("music").pause();
+      button.value = 'Play Victory March';
+      button.setAttribute('data-state', 'paused');
+    }
+  }
+  </script>
+</head>
+
+<body>
+<nav id="toolbar">
+  <ul>
+    <li id="nddotedu"><a href="http://nd.edu">ND.edu</a></li>
+    <li id="ndcalendar"><a href="http://calendar.nd.edu">Calendar of Events</a></li>
+    <li id="ndaccal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
+    <li id="ndinsidend"><a href="http://inside.nd.edu/">InsideND</a></li>
+    <li id="ndgmail"><a href="http://gmail.nd.edu/">GMail</a></li>
+    <li id="ndowa"><a href="https://owa.nd.edu/">Webmail</a></li>
+    <li id="nddirectory"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
+    <li id="search">
+      <form method="get" action="http://search.nd.edu/search" id="search-form">
+      <div>
+      <label for="q">Search</label>
+      <input type="hidden" name="client" value="default_frontend">
+      <input type="hidden" name="output" value="xml_no_dtd">
+      <input type="hidden" name="proxystylesheet" value="default_frontend">
+      <input type="hidden" name="site" value="default_collection">
+      <input type="search" name="q" id="q" title="type your search term" placeholder="Search ND.edu">
+      <button type="submit">Search</button>
+      </div>
+      </form>
+    </li>
+    <li><input id="fight-song-button" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March"></li>
+  </ul>
+</nav>
+
+<audio id="music" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+
+</body>
+</html>
