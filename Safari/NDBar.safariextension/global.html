@@ -12,13 +12,13 @@
   #toolbar li a {text-decoration:none; color:#333;}
   #toolbar li a:hover {color:#001b35;}
   
-  #nddotedu {background-image:url(icons/tabicon.png);}
+  #ndhome {background-image:url(icons/tabicon.png);}
+  #ndcalendar {background-image:url(icons/calendar.png);}
   #ndgmail {background-image:url(icons/gmail.png);}
   #ndowa {background-image:url(icons/owa.png);}
   #ndaccal {background-image:url(icons/calendar.png);}
   #ndinsidend {background-image:url(icons/insidend.png);}
   #nddirectory {background-image:url(icons/directory.png);}
-  #ndcalendar {background-image:url(icons/calendar.png);}
   
   #toolbar #ndsearch {float:right; margin:0 0 0 5px; padding:0;}
   #toolbar #ndsearch label {display:none;}
@@ -27,44 +27,12 @@
   #toolbar #ndvictorymarch {float:right; margin:0; padding:0;}
   #victory-march-button {}
   </style>
-  <script type="text/javascript">
-  safari.extension.settings.addEventListener("change", settingChanged, false);
-  function settingChanged(event) {
-    toggleItems();
-  }
-  
-  var Items = ['nddotedu', 'ndcalendar', 'ndaccal', 'ndinsidend', 'ndgmail', 'ndowa', 'nddirectory', 'ndsearch', 'ndvictorymarch'];
-  // safari.extension.settings.foo
-
-  function toggleItems() {
-    for(i=0; i<Items.length; i++) {
-      var css = (safari.extension.settings.getItem(Items[i]) != true) ? 'none' : 'block';
-      document.getElementById(Items[i]).style.display = css;
-    }
-  }
-  
-  function toggleAudio() {
-    var button = document.getElementById("victory-march-button");
-    var state = button.getAttribute('data-state');
-    if(state == 'paused') {
-      document.getElementById("music").play();
-      button.value = 'Pause Victory March';
-      button.setAttribute('data-state', 'playing');
-    } else {
-      document.getElementById("music").pause();
-      button.value = 'Play Victory March';
-      button.setAttribute('data-state', 'paused');
-    }
-  }
-  
-  toggleItems();
-  </script>
 </head>
 
 <body>
 <nav id="toolbar">
   <ul>
-    <li id="nddotedu"><a href="http://nd.edu">ND.edu</a></li>
+    <li id="ndhome"><a href="http://nd.edu">ND.edu</a></li>
     <li id="ndcalendar"><a href="http://calendar.nd.edu">Calendar of Events</a></li>
     <li id="ndaccal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
     <li id="ndinsidend"><a href="http://inside.nd.edu/">InsideND</a></li>
@@ -84,5 +52,36 @@
 
 <audio id="music" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 
+<script type="text/javascript">
+safari.extension.settings.addEventListener("change", settingChanged, false);
+function settingChanged(event) {
+  toggleItems();
+}
+
+var Items = ['ndhome', 'ndcalendar', 'ndaccal', 'ndinsidend', 'ndgmail', 'ndowa', 'nddirectory', 'ndsearch', 'ndvictorymarch'];
+
+function toggleItems() {
+  for(i=0; i<Items.length; i++) {
+    var css = (safari.extension.settings.getItem(Items[i]) != true) ? 'none' : 'block';
+    document.getElementById(Items[i]).style.display = css;
+  }
+}
+
+function toggleAudio() {
+  var button = document.getElementById("victory-march-button");
+  var state = button.getAttribute('data-state');
+  if(state == 'paused') {
+    document.getElementById("music").play();
+    button.value = 'Pause Victory March';
+    button.setAttribute('data-state', 'playing');
+  } else {
+    document.getElementById("music").pause();
+    button.value = 'Play Victory March';
+    button.setAttribute('data-state', 'paused');
+  }
+}
+
+toggleItems();
+</script>
 </body>
 </html>
