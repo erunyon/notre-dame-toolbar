@@ -14,8 +14,9 @@ h2. Changelog
 
 * v0.2.1 (2010-12-20)
 ** ADD: Added YouTube
-* v0.11 (2010-12-20)
+** FIX: Automatic updates now functioning
+* v0.1.1 (2010-12-20)
 ** FIX: Fixed some broken toolbar links and tweaked some styles
-* v0.1 (2010-12-20)
+* v0.1 (2010-12-10)
 ** ADD: Added Safari Extension with functional Preferences
 ** ADD: Added all links from ND.edu Popular Sites
