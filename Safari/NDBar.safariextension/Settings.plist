@@ -24,106 +24,6 @@
   </dict>
   <dict>
     <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_calendar</string>
-    <key>Title</key>
-    <string>Calendar of Events</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_tour</string>
-    <key>Title</key>
-    <string>Tour</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <false/>
-    <key>Key</key>
-    <string>tool_videochannel</string>
-    <key>Title</key>
-    <string>Video Channel</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_exchange</string>
-    <key>Title</key>
-    <string>Exchange</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_insidend</string>
-    <key>Title</key>
-    <string>InsideND</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_gmail</string>
-    <key>Title</key>
-    <string>Gmail</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_concourse</string>
-    <key>Title</key>
-    <string>Concourse</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_directories</string>
-    <key>Title</key>
-    <string>Directories</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_webfile</string>
-    <key>Title</key>
-    <string>Webfile</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
-    <true/>
-    <key>Key</key>
-    <string>tool_libraries</string>
-    <key>Title</key>
-    <string>Libraries</string>
-    <key>Type</key>
-    <string>CheckBox</string>
-  </dict>
-  <dict>
-    <key>DefaultValue</key>
     <false/>
     <key>Key</key>
     <string>tool_acadcal</string>
@@ -138,7 +38,17 @@
     <key>Key</key>
     <string>tool_bookstore</string>
     <key>Title</key>
-    <string>ND Bookstore</string>
+    <string>Bookstore</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_calendar</string>
+    <key>Title</key>
+    <string>Calendar of Events</string>
     <key>Type</key>
     <string>CheckBox</string>
   </dict>
@@ -164,6 +74,16 @@
   </dict>
   <dict>
     <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_concourse</string>
+    <key>Title</key>
+    <string>Concourse</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
     <false/>
     <key>Key</key>
     <string>tool_dining</string>
@@ -174,11 +94,51 @@
   </dict>
   <dict>
     <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_directories</string>
+    <key>Title</key>
+    <string>Directories</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_exchange</string>
+    <key>Title</key>
+    <string>Exchange</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_gmail</string>
+    <key>Title</key>
+    <string>Gmail</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
     <false/>
     <key>Key</key>
     <string>tool_hr</string>
     <key>Title</key>
     <string>Human Resources</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_insidend</string>
+    <key>Title</key>
+    <string>InsideND</string>
     <key>Type</key>
     <string>CheckBox</string>
   </dict>
@@ -199,6 +159,16 @@
     <string>tool_itunes</string>
     <key>Title</key>
     <string>iTunes</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_libraries</string>
+    <key>Title</key>
+    <string>Libraries</string>
     <key>Type</key>
     <string>CheckBox</string>
   </dict>
@@ -264,11 +234,41 @@
   </dict>
   <dict>
     <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_tour</string>
+    <key>Title</key>
+    <string>Tour</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <false/>
+    <key>Key</key>
+    <string>tool_videochannel</string>
+    <key>Title</key>
+    <string>Video Channel</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
     <false/>
     <key>Key</key>
     <string>tool_webcams</string>
     <key>Title</key>
     <string>Webcams</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
+    <key>DefaultValue</key>
+    <true/>
+    <key>Key</key>
+    <string>tool_webfile</string>
+    <key>Title</key>
+    <string>Webfile</string>
     <key>Type</key>
     <string>CheckBox</string>
   </dict>
