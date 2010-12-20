@@ -7,13 +7,13 @@
 	<key>CFBundleDisplayName</key>
 	<string>ND.edu Quick Access Bar</string>
 	<key>CFBundleIdentifier</key>
-	<string>edu.nddotedu.ndbar</string>
+	<string>com.github.erunyon.notre-dame-toolbar</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>0.1</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>

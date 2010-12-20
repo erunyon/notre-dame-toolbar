@@ -5,27 +5,24 @@
   <style>
   html,body {margin:0; padding:0;}
   button {}
-  
+
   #toolbar {margin:0; padding:0;}
-  #toolbar ul {margin:3px 0 0; padding:0 10px; list-style:none;}
-  #toolbar li {display:inline; float:left; height:16px; margin:4px 6px 0 0; padding:0 0 0 19px; background-repeat:no-repeat; background-position:left 0;}
+  #toolbar ul {overflow:hidden; height:22px; margin:3px 0 0; padding:0 10px 0 24px; list-style:none; background:url(images/tabicon.png) 5px center no-repeat;}
+  #toolbar li {display:inline; float:left; height:16px; margin:4px 10px; padding:0;}
   #toolbar li a {text-decoration:none; color:#333;}
   #toolbar li a:hover {color:#001b35;}
-  
-  #ndhome {background-image:url(icons/tabicon.png);}
-  #ndcalendar {background-image:url(icons/calendar.png);}
-  #ndgmail {background-image:url(icons/gmail.png);}
-  #ndowa {background-image:url(icons/owa.png);}
-  #ndaccal {background-image:url(icons/calendar.png);}
-  #ndinsidend {background-image:url(icons/insidend.png);}
-  #nddirectory {background-image:url(icons/directory.png);}
-  
+
   #toolbar #ndsearch {float:right; margin:0 0 0 5px; padding:0;}
   #toolbar #ndsearch label {display:none;}
   #q {width:150px;}
-  
+
+  #toolbar #ndvictorymarchrewind,
   #toolbar #ndvictorymarch {float:right; margin:0; padding:0;}
-  #victory-march-button {}
+  #victory-march-play,
+  #victory-march-rewind {width:20px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
+  #victory-march-play.paused {background:url(images/control_play.png) center center no-repeat;}
+  #victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
+  #victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
   </style>
 </head>
 
@@ -46,11 +43,12 @@
       <button type="submit">Search</button>
       </form>
     </li>
-    <li id="ndvictorymarch"><input id="victory-march-button" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March"></li>
+    <li id="ndvictorymarch"><input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March"></li>
+    <li id="ndvictorymarchrewind">Victory March: <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March"></li>
   </ul>
 </nav>
 
-<audio id="music" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+<audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 
 <script type="text/javascript">
 safari.extension.settings.addEventListener("change", settingChanged, false);
@@ -68,17 +66,23 @@ function toggleItems() {
 }
 
 function toggleAudio() {
-  var button = document.getElementById("victory-march-button");
+  var button = document.getElementById("victory-march-play");
   var state = button.getAttribute('data-state');
   if(state == 'paused') {
-    document.getElementById("music").play();
+    document.getElementById("ndvictorymarchaudio").play();
     button.value = 'Pause Victory March';
+    button.className = 'playing';
     button.setAttribute('data-state', 'playing');
   } else {
-    document.getElementById("music").pause();
+    document.getElementById("ndvictorymarchaudio").pause();
     button.value = 'Play Victory March';
+    button.className = 'paused';
     button.setAttribute('data-state', 'paused');
   }
+}
+
+function rewindAudio() {
+  document.getElementById("ndvictorymarchaudio").currentTime = 0;
 }
 
 toggleItems();
