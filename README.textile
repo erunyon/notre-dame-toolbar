@@ -6,9 +6,12 @@ The purpose is to mimic the ND.edu Popular Sites functionality. I'm starting wit
 
 h2. Use
 
-Click on the "Downloads" link and select the most recent version.
+Click on the "Downloads" link and select the most recent version. Be sure to turn on automatic updates in Safari.
+
+Windows users be sure you have QuickTime installed if you want the Victory March to work.
 
 h2. Changelog
+
 * v0.11 (2010-12-20)
 ** FIX: Fixed some broken toolbar links and tweaked some styles
 * v0.1 (2010-12-20)

@@ -273,6 +273,16 @@
     <string>CheckBox</string>
   </dict>
   <dict>
+    <key>DefaultValue</key>
+    <false/>
+    <key>Key</key>
+    <string>tool_youtube</string>
+    <key>Title</key>
+    <string>YouTube</string>
+    <key>Type</key>
+    <string>CheckBox</string>
+  </dict>
+  <dict>
     <key>Type</key>
     <string>Separator</string>
   </dict>
