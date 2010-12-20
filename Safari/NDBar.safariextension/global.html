@@ -4,21 +4,21 @@
   <title>University of Notre Dame Extension Bar</title>
   <style>
   html,body {margin:0; padding:0;}
-  button {}
 
   #toolbar {margin:0; padding:0;}
-  #toolbar ul {overflow:hidden; height:22px; margin:3px 0 0; padding:0 10px 0 24px; list-style:none; background:url(images/tabicon.png) 5px center no-repeat;}
+  #toolbar ul {overflow:hidden; height:20px; margin:3px 0 0; padding:0 10px 0 24px; list-style:none; background:url(images/tabicon.png) 5px center no-repeat;}
   #toolbar li {display:inline; float:left; margin:0; padding:0;}
   #toolbar li a {display:block; float:left; margin:3px 0; padding:1px 8px 3px; text-decoration:none; color:#333; border-radius:12px;}
   #toolbar li a:hover {color:#fff; text-shadow:0 1px 1px #444; background-color:#848484;}
 
-  #toolbar #tool_search {float:right; margin:0 0 0 5px; padding:0;}
+  #toolbar #tool_search {float:right; margin:0 0 0 10px; padding:0;}
   #toolbar #tool_search label {display:none;}
-  #q {width:150px;}
+  #q {margin:2px 0 0; width:150px; font-size:9px;}
+  #tool_search button {font-size:9px;}
 
   #toolbar #tool_victorymarch {float:right; margin:0; padding:0;}
   #victory-march-play,
-  #victory-march-rewind {width:20px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
+  #victory-march-rewind {width:16px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
   #victory-march-play.paused {background:url(images/control_play.png) center center no-repeat;}
   #victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
   #victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
@@ -33,7 +33,7 @@
     <li id="tool_bookstore"><a href="http://www.bkstr.com/webapp/wcs/stores/servlet/StoreCatalogDisplay?catalogId=10001&amp;langId=-1&amp;storeId=10900&amp;demoKey=d">ND Bookstore</a></li>
     <li id="tool_careercenter"><a href="http://careercenter.nd.edu/">Career Center</a></li>
     <li id="tool_calendar"><a href="http://calendar.nd.edu">Calendar</a></li>
-    <li id="tool_campusmap"><a href="/campus-and-community/campus-map/">Campus Map</a></li>
+    <li id="tool_campusmap"><a href="http://nd.edu/campus-and-community/campus-map/">Campus Map</a></li>
     <li id="tool_concourse"><a href="http://concourse.nd.edu">Concourse</a></li>
     <li id="tool_dining"><a href="http://food.nd.edu/places-to-eat/dining-halls/">Dining Menus</a></li>
     <li id="tool_directories"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
@@ -52,7 +52,7 @@
     <li id="tool_registrar"><a href="http://registrar.nd.edu/">Registrar</a></li>
     <li id="tool_tour"><a href="http://tour.nd.edu">Tour</a></li>
     <li id="tool_videochannel"><a href="http://video.nd.edu">Video Channel</a></li>
-    <li id="tool_webcams"><a href="/campus-and-community/sights-sounds/">Webcams</a></li>
+    <li id="tool_webcams"><a href="http://nd.edu/campus-and-community/sights-sounds/">Webcams</a></li>
     <li id="tool_webfile"><a href="http://webfile.nd.edu">Webfile</a></li>
     <li id="tool_search">
       <form method="get" action="http://search.nd.edu/search" id="search-form">
