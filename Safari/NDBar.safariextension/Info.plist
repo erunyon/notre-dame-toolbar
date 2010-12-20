@@ -2,50 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Author</key>
-	<string>Erik Runyon</string>
-	<key>CFBundleDisplayName</key>
-	<string>ND.edu Quick Access Bar</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.github.erunyon.notre-dame-toolbar</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleShortVersionString</key>
-	<string>0.2</string>
-	<key>CFBundleVersion</key>
-	<string>0.2</string>
-	<key>Chrome</key>
-	<dict>
-		<key>Bars</key>
-		<array>
-			<dict>
-				<key>Filename</key>
-				<string>global.html</string>
-				<key>Label</key>
-				<string>ND.edu</string>
-			</dict>
-		</array>
-		<key>Global Page</key>
-		<string>global.html</string>
-	</dict>
-	<key>Content</key>
-	<dict>
-		<key>Scripts</key>
-		<dict/>
-	</dict>
-	<key>Description</key>
-	<string>ND.edu Quick Access Bar</string>
-	<key>ExtensionInfoDictionaryVersion</key>
-	<string>1.0</string>
-	<key>Permissions</key>
-	<dict>
-		<key>Website Access</key>
-		<dict>
-			<key>Level</key>
-			<string>None</string>
-		</dict>
-	</dict>
-	<key>Update Manifest URL</key>
-	<string>https://github.com/erunyon/notre-dame-toolbar/raw/master/Safari/NDBar.safariextension/updates.plist</string>
+  <key>Author</key>
+  <string>Erik Runyon</string>
+  <key>CFBundleDisplayName</key>
+  <string>ND.edu Quick Access Bar</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.github.erunyon.notre-dame-toolbar</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleShortVersionString</key>
+  <string>0.2.1</string>
+  <key>CFBundleVersion</key>
+  <string>0.2.1</string>
+  <key>Chrome</key>
+  <dict>
+    <key>Bars</key>
+    <array>
+      <dict>
+        <key>Filename</key>
+        <string>global.html</string>
+        <key>Label</key>
+        <string>ND.edu</string>
+      </dict>
+    </array>
+    <key>Global Page</key>
+    <string>global.html</string>
+  </dict>
+  <key>Content</key>
+  <dict>
+    <key>Scripts</key>
+    <dict/>
+  </dict>
+  <key>Description</key>
+  <string>ND.edu Quick Access Bar</string>
+  <key>ExtensionInfoDictionaryVersion</key>
+  <string>1.0</string>
+  <key>Permissions</key>
+  <dict>
+    <key>Website Access</key>
+    <dict>
+      <key>Level</key>
+      <string>None</string>
+    </dict>
+  </dict>
+  <key>Update Manifest URL</key>
+  <string>https://github.com/erunyon/notre-dame-toolbar/raw/master/Safari/NDBar.safariextension/updates.plist</string>
 </dict>
 </plist>
