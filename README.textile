@@ -6,9 +6,10 @@ The purpose is to mimic the ND.edu Popular Sites functionality. I'm starting wit
 
 h2. Use
 
-Nothing yet.
+Click on the "Downloads" link and select the most recent version.
 
 h2. Changelog
 
-* v0.1 (2010-12-10)
+* v0.1 (2010-12-20)
 ** ADD: Added Safari Extension with functional Preferences
+** ADD: Added all links from ND.edu Popular Sites
