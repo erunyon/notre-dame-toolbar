@@ -2,6 +2,10 @@
   "name": "ND.edu Toolbar",
   "version": "0.1",
   "description": "ND.edu Toolbar",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "ndtoolbar.html"
+  },
   "toolstrips" : [
     "ndtoolbar.html"
   ]

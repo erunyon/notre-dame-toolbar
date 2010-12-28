@@ -1,73 +1,104 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>University of Notre Dame Extension Bar</title>
-  <style>
-  html,body {margin:0; padding:0;}
-  
-  #toolbar {margin:0; padding:0;}
-  #toolbar ul {margin:3px 0 0; padding:0 10px; list-style:none;}
-  #toolbar li {display:inline-block; height:16px; margin:0 6px 0 0; padding:0 0 0 19px; background-repeat:no-repeat; background-position:left 0;}
-  #toolbar li a {text-decoration:none; color:#333;}
-  #toolbar li a:hover {color:#001b35;}
-  
-  #nddotedu {background-image:url(tabicon.png);}
-  #ndgmail {background-image:url(gmail.png);}
-  #ndowa {background-image:url(owa.png);}
-  #ndaccal {background-image:url(calendar.png);}
-  #ndinsidend {background-image:url(insidend.png);}
-  #nddirectory {background-image:url(directory.png);}
-  #ndcalendar {background-image:url(calendar.png);}
-  
-  #toolbar #search {margin-left:20px;}
-  #toolbar #search label {display:none;}
-  #q {width:150px;}
-  </style>
-  <script type="text/javascript">
-  function toggleAudio() {
-    var button = document.getElementById("fight-song-button");
-    var state = button.getAttribute('data-state');
-    if(state == 'paused') {
-      document.getElementById("music").play();
-      button.value = 'Pause Victory March';
-      button.setAttribute('data-state', 'playing');
-    } else {
-      document.getElementById("music").pause();
-      button.value = 'Play Victory March';
-      button.setAttribute('data-state', 'paused');
-    }
-  }
-  </script>
-</head>
+<style>
+html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
 
-<body>
+#toolbar {width:200px; margin:0; padding:0;}
+#toolbar ul {margin:0; padding:0; list-style:none;}
+#toolbar li {margin:0; padding:0;}
+#toolbar li a {margin:2px; display:block; text-decoration:none; color:#333;}
+#toolbar li a:hover {text-shadow:0 1px 1px #444;}
+
+#tool_search {margin:5px 0; padding:5px 0; border:1px solid #333; border-width:1px 0;}
+#tool_search label {display:none;}
+#q {}
+#tool_search button {}
+
+#tool_victorymarch {}
+#victory-march-play,
+#victory-march-rewind {width:14px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
+#victory-march-play.paused {background:url(images/control_play.png) center center no-repeat;}
+#victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
+#victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
+</style>
+
 <nav id="toolbar">
-  <ul>
-    <li id="nddotedu"><a href="http://nd.edu">ND.edu</a></li>
-    <li id="ndcalendar"><a href="http://calendar.nd.edu">Calendar of Events</a></li>
-    <li id="ndaccal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
-    <li id="ndinsidend"><a href="http://inside.nd.edu/">InsideND</a></li>
-    <li id="ndgmail"><a href="http://gmail.nd.edu/">GMail</a></li>
-    <li id="ndowa"><a href="https://owa.nd.edu/">Webmail</a></li>
-    <li id="nddirectory"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
-    <li id="search">
-      <form method="get" action="http://search.nd.edu/search" id="search-form">
-      <div>
-      <label for="q">Search</label>
-      <input type="hidden" name="client" value="default_frontend">
-      <input type="hidden" name="output" value="xml_no_dtd">
-      <input type="hidden" name="proxystylesheet" value="default_frontend">
-      <input type="hidden" name="site" value="default_collection">
-      <input type="search" name="q" id="q" title="type your search term" placeholder="Search ND.edu">
-      <button type="submit">Search</button>
-      </div>
-      </form>
-    </li>
-    <li><input id="fight-song-button" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March"></li>
-  </ul>
+<ul>
+  <li id="tool_nddotedu"><a href="http://nd.edu">ND.edu</a></li>
+  <li id="tool_acadcal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
+  <li id="tool_bookstore"><a href="http://www.bkstr.com/webapp/wcs/stores/servlet/StoreCatalogDisplay?catalogId=10001&amp;langId=-1&amp;storeId=10900&amp;demoKey=d">Bookstore</a></li>
+  <li id="tool_careercenter"><a href="http://careercenter.nd.edu/">Career Center</a></li>
+  <li id="tool_calendar"><a href="http://calendar.nd.edu">Calendar</a></li>
+  <li id="tool_campusmap"><a href="http://nd.edu/campus-and-community/campus-map/">Campus Map</a></li>
+  <li id="tool_concourse"><a href="http://concourse.nd.edu">Concourse</a></li>
+  <li id="tool_dining"><a href="http://food.nd.edu/places-to-eat/dining-halls/">Dining Menus</a></li>
+  <li id="tool_directories"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
+  <li id="tool_exchange"><a href="https://owa.nd.edu/">Exchange</a></li>
+  <li id="tool_gmail"><a href="http://gmail.nd.edu">Gmail</a></li>
+  <li id="tool_hr"><a href="http://hr.nd.edu">Human Resources</a></li>
+  <li id="tool_insidend"><a href="http://inside.nd.edu/">InsideND</a></li>
+  <li id="tool_irishonline"><a href="http://irishonline.nd.edu/">Irish Online</a></li>
+  <li id="tool_itunes"><a href="http://itunes.nd.edu">iTunes</a></li>
+  <li id="tool_libraries"><a href="http://library.nd.edu/">Libraries</a></li>
+  <li id="tool_magazine"><a href="http://magazine.nd.edu">ND Magazine</a></li>
+  <li id="tool_observer"><a href="http://www.ndsmcobserver.com/">The Observer</a></li>
+  <li id="tool_ocw"><a href="http://ocw.nd.edu">OpenCourseWare</a></li>
+  <li id="tool_oit"><a href="http://oit.nd.edu">OIT</a></li>
+  <li id="tool_recsports"><a href="http://recsports.nd.edu">RecSports</a></li>
+  <li id="tool_registrar"><a href="http://registrar.nd.edu/">Registrar</a></li>
+  <li id="tool_tour"><a href="http://tour.nd.edu">Tour</a></li>
+  <li id="tool_videochannel"><a href="http://video.nd.edu">Video Channel</a></li>
+  <li id="tool_webcams"><a href="http://nd.edu/campus-and-community/sights-sounds/">Webcams</a></li>
+  <li id="tool_webfile"><a href="http://webfile.nd.edu">Webfile</a></li>
+  <li id="tool_youtube"><a href="http://www.youtube.com/NDdotEDU">YouTube</a></li>
+  <li id="tool_search">
+    <form method="get" action="http://search.nd.edu/search" id="search-form">
+    <input type="hidden" name="proxystylesheet" value="default_frontend">
+    <input type="search" name="q" id="q" title="type your search term" placeholder="Search ND.edu">
+    <button type="submit">Search</button>
+    </form>
+  </li>
+  <li id="tool_victorymarch">
+    Victory March: <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March">
+    <input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March">
+  </li>
+</ul>
 </nav>
 
-<audio id="music" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+<audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 
-</body>
-</html>
+<script>
+// safari.extension.settings.addEventListener("change", settingChanged, false);
+function settingChanged(event) {
+  toggleItems();
+}
+
+var Items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_victorymarch','tool_search'];
+
+function toggleItems() {
+  for(i=0; i<Items.length; i++) {
+    // var css = (safari.extension.settings.getItem(Items[i]) != true) ? 'none' : 'block';
+    // document.getElementById(Items[i]).style.display = css;
+  }
+}
+
+function toggleAudio() {
+  var button = document.getElementById("victory-march-play");
+  var state = button.getAttribute('data-state');
+  if(state == 'paused') {
+    document.getElementById("ndvictorymarchaudio").play();
+    button.value = 'Pause Victory March';
+    button.className = 'playing';
+    button.setAttribute('data-state', 'playing');
+  } else {
+    document.getElementById("ndvictorymarchaudio").pause();
+    button.value = 'Play Victory March';
+    button.className = 'paused';
+    button.setAttribute('data-state', 'paused');
+  }
+}
+
+function rewindAudio() {
+  document.getElementById("ndvictorymarchaudio").currentTime = 0;
+}
+
+toggleItems();
+</script>
