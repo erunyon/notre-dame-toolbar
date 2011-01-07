@@ -2,15 +2,17 @@
 <head>
 <title>ND Toolbar</title>
 <style>
-html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
-
-#toolbar {width:200px; margin:0; padding:0;}
-#toolbar ul {margin:0; padding:0; list-style:none;}
+html,body {margin:0; padding:10px; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
+h2 {font-size:15pt;}
+h2 span {float:right; font-weight:normal; font-size:10pt;}
+h3 {margin:10px 0 5px; font-size:14pt;}
+#toolbar {width:400px; margin:0; padding:0;}
+#toolbar ul {float:left; width:100%; margin:0; padding:0; list-style:none;}
 #toolbar li {margin:0; padding:0;}
-#toolbar li a {margin:2px; display:block; text-decoration:none; color:#333;}
+#toolbar li a {float:left; width:120px; margin:2px 10px 2px 0; display:block; text-decoration:none; color:#333;}
 #toolbar li a:hover {text-shadow:0 1px 1px #444;}
 
-#tool_search {margin:5px 0; padding:5px 0; border:1px solid #333; border-width:1px 0;}
+#tool_search {}
 #tool_search label {display:none;}
 #q {}
 #tool_search button {}
@@ -24,64 +26,61 @@ html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetic
 </style>
 </head>
 <body onload="toggleItems()">
-<div id="foo">foo</div>
+<h2>Links <span><a href="options.html">Options</a></span></h2>
 <nav id="toolbar">
 <ul>
-  <li id="tool_nddotedu"><a href="http://nd.edu">ND.edu</a></li>
-  <li id="tool_acadcal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
-  <li id="tool_bookstore"><a href="http://www.bkstr.com/webapp/wcs/stores/servlet/StoreCatalogDisplay?catalogId=10001&amp;langId=-1&amp;storeId=10900&amp;demoKey=d">Bookstore</a></li>
-  <li id="tool_careercenter"><a href="http://careercenter.nd.edu/">Career Center</a></li>
-  <li id="tool_calendar"><a href="http://calendar.nd.edu">Calendar</a></li>
-  <li id="tool_campusmap"><a href="http://nd.edu/campus-and-community/campus-map/">Campus Map</a></li>
-  <li id="tool_concourse"><a href="http://concourse.nd.edu">Concourse</a></li>
-  <li id="tool_dining"><a href="http://food.nd.edu/places-to-eat/dining-halls/">Dining Menus</a></li>
-  <li id="tool_directories"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
-  <li id="tool_exchange"><a href="https://owa.nd.edu/">Exchange</a></li>
-  <li id="tool_gmail"><a href="http://gmail.nd.edu">Gmail</a></li>
-  <li id="tool_hr"><a href="http://hr.nd.edu">Human Resources</a></li>
-  <li id="tool_insidend"><a href="http://inside.nd.edu/">InsideND</a></li>
-  <li id="tool_irishonline"><a href="http://irishonline.nd.edu/">Irish Online</a></li>
-  <li id="tool_itunes"><a href="http://itunes.nd.edu">iTunes</a></li>
-  <li id="tool_libraries"><a href="http://library.nd.edu/">Libraries</a></li>
-  <li id="tool_magazine"><a href="http://magazine.nd.edu">ND Magazine</a></li>
-  <li id="tool_observer"><a href="http://www.ndsmcobserver.com/">The Observer</a></li>
-  <li id="tool_ocw"><a href="http://ocw.nd.edu">OpenCourseWare</a></li>
-  <li id="tool_oit"><a href="http://oit.nd.edu">OIT</a></li>
-  <li id="tool_recsports"><a href="http://recsports.nd.edu">RecSports</a></li>
-  <li id="tool_registrar"><a href="http://registrar.nd.edu/">Registrar</a></li>
-  <li id="tool_tour"><a href="http://tour.nd.edu">Tour</a></li>
-  <li id="tool_videochannel"><a href="http://video.nd.edu">Video Channel</a></li>
-  <li id="tool_webcams"><a href="http://nd.edu/campus-and-community/sights-sounds/">Webcams</a></li>
-  <li id="tool_webfile"><a href="http://webfile.nd.edu">Webfile</a></li>
-  <li id="tool_youtube"><a href="http://www.youtube.com/NDdotEDU">YouTube</a></li>
-  <li id="tool_search">
-    <form method="get" action="http://search.nd.edu/search" id="search-form">
-    <input type="hidden" name="proxystylesheet" value="default_frontend">
-    <input type="search" name="q" id="q" title="type your search term" placeholder="Search ND.edu">
-    <button type="submit">Search</button>
-    </form>
-  </li>
-  <li id="tool_victorymarch">
-    Victory March: <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March">
-    <input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March">
-  </li>
+  <li id="tool_nddotedu"><a target="_blank" href="http://nd.edu">ND.edu</a></li>
+  <li id="tool_acadcal"><a target="_blank" href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
+  <li id="tool_bookstore"><a target="_blank" href="http://www.bkstr.com/webapp/wcs/stores/servlet/StoreCatalogDisplay?catalogId=10001&amp;langId=-1&amp;storeId=10900&amp;demoKey=d">Bookstore</a></li>
+  <li id="tool_careercenter"><a target="_blank" href="http://careercenter.nd.edu/">Career Center</a></li>
+  <li id="tool_calendar"><a target="_blank" href="http://calendar.nd.edu">Calendar</a></li>
+  <li id="tool_campusmap"><a target="_blank" href="http://nd.edu/campus-and-community/campus-map/">Campus Map</a></li>
+  <li id="tool_concourse"><a target="_blank" href="http://concourse.nd.edu">Concourse</a></li>
+  <li id="tool_dining"><a target="_blank" href="http://food.nd.edu/places-to-eat/dining-halls/">Dining Menus</a></li>
+  <li id="tool_directories"><a target="_blank" href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
+  <li id="tool_exchange"><a target="_blank" href="https://owa.nd.edu/">Exchange</a></li>
+  <li id="tool_gmail"><a target="_blank" href="http://gmail.nd.edu">Gmail</a></li>
+  <li id="tool_hr"><a target="_blank" href="http://hr.nd.edu">Human Resources</a></li>
+  <li id="tool_insidend"><a target="_blank" href="http://inside.nd.edu/">InsideND</a></li>
+  <li id="tool_irishonline"><a target="_blank" href="http://irishonline.nd.edu/">Irish Online</a></li>
+  <li id="tool_itunes"><a target="_blank" href="http://itunes.nd.edu">iTunes</a></li>
+  <li id="tool_libraries"><a target="_blank" href="http://library.nd.edu/">Libraries</a></li>
+  <li id="tool_magazine"><a target="_blank" href="http://magazine.nd.edu">ND Magazine</a></li>
+  <li id="tool_observer"><a target="_blank" href="http://www.ndsmcobserver.com/">The Observer</a></li>
+  <li id="tool_ocw"><a target="_blank" href="http://ocw.nd.edu">OpenCourseWare</a></li>
+  <li id="tool_oit"><a target="_blank" href="http://oit.nd.edu">OIT</a></li>
+  <li id="tool_recsports"><a target="_blank" href="http://recsports.nd.edu">RecSports</a></li>
+  <li id="tool_registrar"><a target="_blank" href="http://registrar.nd.edu/">Registrar</a></li>
+  <li id="tool_tour"><a target="_blank" href="http://tour.nd.edu">Tour</a></li>
+  <li id="tool_videochannel"><a target="_blank" href="http://video.nd.edu">Video Channel</a></li>
+  <li id="tool_webcams"><a target="_blank" href="http://nd.edu/campus-and-community/sights-sounds/">Webcams</a></li>
+  <li id="tool_webfile"><a target="_blank" href="http://webfile.nd.edu">Webfile</a></li>
+  <li id="tool_youtube"><a target="_blank" href="http://www.youtube.com/NDdotEDU">YouTube</a></li>
 </ul>
 </nav>
+<div id="tool_search">
+  <h3>Search</h3>
+  <form method="get" action="http://search.nd.edu/search" id="search-form" target="_blank">
+  <input type="hidden" name="proxystylesheet" value="default_frontend">
+  <input type="search" name="q" id="q" title="type your search term" placeholder="Search ND.edu">
+  <button type="submit">Search</button>
+  </form>
+</div>
+<div id="tool_victorymarch">
+  <h3>Victory March</h3>
+  <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March">
+  <input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March">
+  <audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+</div>
 
-<audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
-
-<p><a href="options.html">Options</a></p>
 <script>
 
 var Items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_victorymarch','tool_search'];
 
 function toggleItems() {
-  var foo = document.getElementById("foo");
-  foo.innerHTML = 'in toggle';
   for(i=0; i<Items.length; i++) {
     var id = Items[i];
     var css = (localStorage[id] == 'off') ? 'none' : 'block';
-    foo.innerHTML = 'looping';
     document.getElementById(Items[i]).style.display = css;
   }
 }
