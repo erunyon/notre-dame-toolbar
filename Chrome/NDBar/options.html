@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>Options for ND Toolbar</title>
+  <script type="text/javascript" src="options.js"></script>
+  <style>
+  html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
+  #toolbar-options {margin:0; padding:0; list-style:none;}
+  #toolbar-options li {margin:2px 0; padding:0;}
+  </style>
+</head>
+<body onload="loadOptions()">
+  <h1>Options</h1>
+  <div id="notice"></div>
+  <ul id="toolbar-options"></ul>
+  <br />
+  <button onclick="saveOptions()">Save</button>
+  <br />
+  <button onclick="eraseOptions()">Restore default</button>
+  <a href="ndtoolbar.html">Exit</a>
+<script>
+var defaultColor = "blue";
+var items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_victorymarch','tool_search'];
+
+function loadOptions() {
+  var list = '';
+  // var favColor = localStorage["favColor"];
+
+  // valid colors are red, blue, green and yellow
+  // if (favColor == undefined || (favColor != "red" && favColor != "blue" && favColor != "green" && favColor != "yellow")) {
+  //   favColor = defaultColor;
+  // }
+  //
+  // var select = document.getElementById("color");
+  // for (var i = 0; i < select.children.length; i++) {
+  //   var child = select.children[i];
+  //     if (child.value == favColor) {
+  //     child.selected = "true";
+  //     break;
+  //   }
+  // }
+  for(i=0; i<items.length; i++) {
+    var id = items[i];
+    var checked = (typeof(localStorage[id]) == 'undefined' || localStorage[id] == 'on') ? 'checked="checked"' : '';
+    list += '<li><input type="checkbox" id="'+id+'" '+checked+' onclick="toggleOption(this)"><label for="'+id+'">'+id+' '+localStorage[id]+'</label></li>';
+  }
+  document.getElementById('toolbar-options').innerHTML = list;
+}
+
+function toggleOption(radio) {
+  var notice = document.getElementById('notice');
+  var id = radio.id;
+  var val = (radio.value == 'on') ? 'on' : 'off';
+  notice.innerHTML = radio.value;
+  localStorage[id] = val;
+}
+
+function saveOptions() {
+  var select = document.getElementById("color");
+  var color = select.children[select.selectedIndex].value;
+  localStorage["favColor"] = color;
+}
+
+function eraseOptions() {
+  localStorage.removeItem("favColor");
+  location.reload();
+}
+</script>
+</body>
+</html>

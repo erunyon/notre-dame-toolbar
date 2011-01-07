@@ -1,3 +1,6 @@
+<html>
+<head>
+<title>ND Toolbar</title>
 <style>
 html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
 
@@ -19,7 +22,9 @@ html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetic
 #victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
 #victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
 </style>
-
+</head>
+<body onload="toggleItems()">
+<div id="foo">foo</div>
 <nav id="toolbar">
 <ul>
   <li id="tool_nddotedu"><a href="http://nd.edu">ND.edu</a></li>
@@ -65,18 +70,19 @@ html,body {margin:0; padding:0; font:10pt/12pt "Helvetica Neue", Arial, Helvetic
 
 <audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 
+<p><a href="options.html">Options</a></p>
 <script>
-// safari.extension.settings.addEventListener("change", settingChanged, false);
-function settingChanged(event) {
-  toggleItems();
-}
 
 var Items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_victorymarch','tool_search'];
 
 function toggleItems() {
+  var foo = document.getElementById("foo");
+  foo.innerHTML = 'in toggle';
   for(i=0; i<Items.length; i++) {
-    // var css = (safari.extension.settings.getItem(Items[i]) != true) ? 'none' : 'block';
-    // document.getElementById(Items[i]).style.display = css;
+    var id = Items[i];
+    var css = (localStorage[id] == 'off') ? 'none' : 'block';
+    foo.innerHTML = 'looping';
+    document.getElementById(Items[i]).style.display = css;
   }
 }
 
@@ -100,5 +106,6 @@ function rewindAudio() {
   document.getElementById("ndvictorymarchaudio").currentTime = 0;
 }
 
-toggleItems();
 </script>
+</body>
+</html>

@@ -8,5 +8,6 @@
   },
   "toolstrips" : [
     "ndtoolbar.html"
-  ]
+  ],
+  "options_page": "options.html"
 }
