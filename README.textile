@@ -2,7 +2,7 @@ h1. Notre Dame toolbar extensions
 
 This is a collection of browser extensions.
 
-The purpose is to mimic the ND.edu Popular Sites functionality. I'm starting with the Safari version with plans to add Firefox and Chrome versions.
+The purpose is to mimic the ND.edu Popular Sites functionality. Safari and Chrome plugins are currently under development. Firefox extension will be forthcoming.
 
 h2. Use
 
@@ -10,7 +10,7 @@ Click on the "Downloads" link and select the most recent version. Be sure to tur
 
 Windows users be sure you have QuickTime installed if you want the Victory March to work.
 
-h2. Changelog
+h2. Safari Plugin Changelog
 
 * v0.2.1 (2010-12-20)
 ** ADD: Added YouTube
@@ -20,3 +20,8 @@ h2. Changelog
 * v0.1 (2010-12-10)
 ** ADD: Added Safari Extension with functional Preferences
 ** ADD: Added all links from ND.edu Popular Sites
+
+h2. Chrome Plugin Changelog
+
+* v0.1 (2011-01-18)
+** ADD: Basic functionality with Preferences is in place
