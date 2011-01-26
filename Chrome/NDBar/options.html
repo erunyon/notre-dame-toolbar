@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Options for ND Toolbar</title>
+  <title>Popular Sites Toolbar Options</title>
   <script type="text/javascript" src="config.js"></script>
   <style>
   html,body {margin:0; padding:10px; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
@@ -15,15 +15,14 @@
   <h2>Options <span>[<a href="ndtoolbar.html">Exit</a>]</span></h2>
   <nav id="toolbar"><ul id="toolbar-options"></ul></nav>
 <script>
-var defaultColor = "blue";
-
 function loadOptions() {
   var list = '';
 
   for(i=0; i<Items.length; i++) {
-    var id = Items[i].id;
-    var label = Items[i].label;
-    var checked = (typeof(localStorage[id]) == 'undefined' || localStorage[id] == 'on') ? 'checked="checked"' : '';
+    var id = Items[i].id,
+        label = Items[i].label,
+        checked = (typeof(localStorage[id]) == 'undefined' || localStorage[id] == 'on') ? 'checked="checked"' : ''
+    ;
     
     list += '<li><input type="checkbox" id="'+id+'" '+checked+' onclick="toggleOption(this)"><label for="'+id+'">'+label+'</label></li>';
   }
@@ -31,8 +30,10 @@ function loadOptions() {
 }
 
 function toggleOption(radio) {
-  var id = radio.id;
-  var val = (radio.value == 'on') ? 'on' : 'off';
+  var id = radio.id,
+      val = (radio.value == 'on') ? 'on' : 'off'
+  ;
+      
   localStorage[id] = val;
 }
 </script>

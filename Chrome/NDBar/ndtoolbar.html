@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ND Toolbar</title>
+<title>Popular Sites Toolbar</title>
 <script type="text/javascript" src="config.js"></script>
 <style>
 html,body {margin:0; padding:10px; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
@@ -53,8 +53,10 @@ h3 {margin:10px 0 5px; font-size:14pt;}
 function toggleItems() {
   var list = '<ul>';
   for(i=0; i<Items.length; i++) {
-    var item = Items[i];
-    var id = item.id;
+    var item = Items[i],
+        id = item.id
+    ;
+    
     if(item.type == 'link') {
       if(localStorage[id] != 'off') {
         list += '<li id="'+ id +'"><a target="_blank" href="'+ item.href +'">'+ item.label +'</a></li>';
@@ -69,8 +71,10 @@ function toggleItems() {
 }
 
 function toggleAudio() {
-  var button = document.getElementById("audio-play");
-  var state = button.getAttribute('data-state');
+  var button = document.getElementById("audio-play"),
+      state = button.getAttribute('data-state')
+  ;
+  
   if(state == 'paused') {
     document.getElementById("audio-src").play();
     button.value = 'Pause Audio';
