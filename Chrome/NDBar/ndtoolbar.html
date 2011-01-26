@@ -28,11 +28,7 @@ h3 {margin:10px 0 5px; font-size:14pt;}
 </head>
 <body onload="toggleItems()">
 <h2>Links <span>[<a href="options.html">Options</a>]</span></h2>
-<nav id="toolbar">
-<ul>
-
-</ul>
-</nav>
+<nav id="toolbar"></nav>
 <div id="tool_search">
   <h3>Search</h3>
   <form method="get" action="http://search.nd.edu/search" id="search-form" target="_blank">
@@ -56,7 +52,7 @@ function toggleItems() {
     var item = Items[i],
         id = item.id
     ;
-    
+
     if(item.type == 'link') {
       if(localStorage[id] != 'off') {
         list += '<li id="'+ id +'"><a target="_blank" href="'+ item.href +'">'+ item.label +'</a></li>';
@@ -74,7 +70,7 @@ function toggleAudio() {
   var button = document.getElementById("audio-play"),
       state = button.getAttribute('data-state')
   ;
-  
+
   if(state == 'paused') {
     document.getElementById("audio-src").play();
     button.value = 'Pause Audio';
