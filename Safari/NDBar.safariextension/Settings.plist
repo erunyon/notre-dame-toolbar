@@ -296,7 +296,7 @@
     <key>DefaultValue</key>
     <true/>
     <key>Key</key>
-    <string>tool_victorymarch</string>
+    <string>tool_audio</string>
     <key>Title</key>
     <string>Show Victory March</string>
     <key>Type</key>

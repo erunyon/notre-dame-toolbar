@@ -16,12 +16,12 @@
   #q {margin:2px 0 0; width:150px; font-size:9px;}
   #tool_search button {font-size:9px;}
 
-  #toolbar #tool_victorymarch {float:right; margin:0; padding:0;}
-  #victory-march-play,
-  #victory-march-rewind {width:14px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
-  #victory-march-play.paused {background:url(images/control_play.png) center center no-repeat;}
-  #victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
-  #victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
+  #toolbar #tool_audio {float:right; margin:0; padding:0;}
+  #audio-play,
+  #audio-rewind {width:14px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
+  #audio-play.paused {background:url(images/control_play.png) center center no-repeat;}
+  #audio-play.playing {background:url(images/control_pause.png) center center no-repeat;}
+  #audio-rewind {background:url(images/control_start.png) center center no-repeat;}
   </style>
 </head>
 
@@ -62,14 +62,14 @@
       <button type="submit">Search</button>
       </form>
     </li>
-    <li id="tool_victorymarch">
-      Victory March: <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March">
-      <input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March">
+    <li id="tool_audio">
+      Victory March: <input id="audio-rewind" type="button" value="Rewind Audio" onclick="rewindAudio()" title="Rewind Audio">
+      <input id="audio-play" class="paused" type="button" value="Play Audio" data-state="paused" onclick="toggleAudio()" title="Audio">
     </li>
   </ul>
 </nav>
 
-<audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+<audio id="audio-src" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 
 <script type="text/javascript">
 safari.extension.settings.addEventListener("change", settingChanged, false);
@@ -77,7 +77,7 @@ function settingChanged(event) {
   toggleItems();
 }
 
-var Items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_victorymarch','tool_search'];
+var Items = ['tool_nddotedu','tool_acadcal','tool_bookstore','tool_careercenter','tool_calendar','tool_campusmap','tool_concourse','tool_dining','tool_directories','tool_exchange', 'tool_gmail', 'tool_hr', 'tool_insidend', 'tool_irishonline', 'tool_itunes', 'tool_libraries', 'tool_magazine', 'tool_observer', 'tool_ocw', 'tool_oit', 'tool_recsports', 'tool_registrar','tool_tour','tool_videochannel','tool_webcams','tool_webfile','tool_youtube','tool_audio','tool_search'];
 
 function toggleItems() {
   for(i=0; i<Items.length; i++) {
@@ -87,23 +87,23 @@ function toggleItems() {
 }
 
 function toggleAudio() {
-  var button = document.getElementById("victory-march-play");
+  var button = document.getElementById("audio-play");
   var state = button.getAttribute('data-state');
   if(state == 'paused') {
-    document.getElementById("ndvictorymarchaudio").play();
-    button.value = 'Pause Victory March';
+    document.getElementById("audio-src").play();
+    button.value = 'Pause Audio';
     button.className = 'playing';
     button.setAttribute('data-state', 'playing');
   } else {
-    document.getElementById("ndvictorymarchaudio").pause();
-    button.value = 'Play Victory March';
+    document.getElementById("audio-src").pause();
+    button.value = 'Play Audio';
     button.className = 'paused';
     button.setAttribute('data-state', 'paused');
   }
 }
 
 function rewindAudio() {
-  document.getElementById("ndvictorymarchaudio").currentTime = 0;
+  document.getElementById("audio-src").currentTime = 0;
 }
 
 toggleItems();
