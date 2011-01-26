@@ -18,12 +18,12 @@ h3 {margin:10px 0 5px; font-size:14pt;}
 #q {}
 #tool_search button {}
 
-#tool_victorymarch {}
-#victory-march-play,
-#victory-march-rewind {width:14px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
-#victory-march-play.paused {background:url(images/control_play.png) center center no-repeat;}
-#victory-march-play.playing {background:url(images/control_pause.png) center center no-repeat;}
-#victory-march-rewind {background:url(images/control_start.png) center center no-repeat;}
+#tool_audio {}
+#audio-play,
+#audio-rewind {width:14px; text-indent:-9999px; overflow:hidden; border:none; cursor:pointer; -webkit-appearance:button; background:url(images/control_start.png) center center no-repeat;}
+#audio-play.paused {background:url(images/control_play.png) center center no-repeat;}
+#audio-play.playing {background:url(images/control_pause.png) center center no-repeat;}
+#audio-rewind {background:url(images/control_start.png) center center no-repeat;}
 </style>
 </head>
 <body onload="toggleItems()">
@@ -41,11 +41,11 @@ h3 {margin:10px 0 5px; font-size:14pt;}
   <button type="submit">Search</button>
   </form>
 </div>
-<div id="tool_victorymarch">
+<div id="tool_audio">
   <h3>Victory March</h3>
-  <input id="victory-march-rewind" type="button" value="Rewind Victory March" onclick="rewindAudio()" title="Rewind Victory March">
-  <input id="victory-march-play" class="paused" type="button" value="Play Victory March" data-state="paused" onclick="toggleAudio()" title="Victory March">
-  <audio id="ndvictorymarchaudio" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
+  <input id="audio-rewind" type="button" value="Rewind Audio" onclick="rewindAudio()" title="Rewind Audio">
+  <input id="audio-play" class="paused" type="button" value="Play Audio" data-state="paused" onclick="toggleAudio()" title="Play Audio">
+  <audio id="audio-src" src="http://nd.edu/campus-and-community/sights-sounds/assets/audio/NotreDameVictoryMarch.mp3"></audio>
 </div>
 
 <script>
@@ -69,23 +69,23 @@ function toggleItems() {
 }
 
 function toggleAudio() {
-  var button = document.getElementById("victory-march-play");
+  var button = document.getElementById("audio-play");
   var state = button.getAttribute('data-state');
   if(state == 'paused') {
-    document.getElementById("ndvictorymarchaudio").play();
-    button.value = 'Pause Victory March';
+    document.getElementById("audio-src").play();
+    button.value = 'Pause Audio';
     button.className = 'playing';
     button.setAttribute('data-state', 'playing');
   } else {
-    document.getElementById("ndvictorymarchaudio").pause();
-    button.value = 'Play Victory March';
+    document.getElementById("audio-src").pause();
+    button.value = 'Play Audio';
     button.className = 'paused';
     button.setAttribute('data-state', 'paused');
   }
 }
 
 function rewindAudio() {
-  document.getElementById("ndvictorymarchaudio").currentTime = 0;
+  document.getElementById("audio-src").currentTime = 0;
 }
 
 </script>

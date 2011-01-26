@@ -26,6 +26,6 @@ var Items = [
   {id:'tool_webcams', label:'Webcams', href:'http://nd.edu/campus-and-community/sights-sounds/', type:'link'},
   {id:'tool_webfile', label:'WebFile', href:'http://webfile.nd.edu/', type:'link'},
   {id:'tool_youtube', label:'YouTube', href:'http://www.youtube.com/NDdotEDU/', type:'link'},
-  {id:'tool_victorymarch', label:'Victory March', href:false, type:'custom'},
+  {id:'tool_audio', label:'Victory March', href:false, type:'custom'},
   {id:'tool_search', label:'Search', href:false, type:'custom'}
 ];
