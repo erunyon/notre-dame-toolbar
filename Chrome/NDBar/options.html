@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Options for ND Toolbar</title>
-  <script type="text/javascript" src="options.js"></script>
+  <script type="text/javascript" src="config.js"></script>
   <style>
   html,body {margin:0; padding:10px; font:10pt/12pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color:#333;}
   h2 {font-size:15pt;}
@@ -16,46 +16,15 @@
   <nav id="toolbar"><ul id="toolbar-options"></ul></nav>
 <script>
 var defaultColor = "blue";
-var items = [
-  {id:'tool_nddotedu', label: 'ND.edu'},
-  {id:'tool_acadcal', label: 'Academic Calendar'},
-  {id:'tool_bookstore', label: 'Bookstore'},
-  {id:'tool_careercenter', label: 'Career Center'},
-  {id:'tool_calendar', label: 'Calendar'},
-  {id:'tool_campusmap', label: 'Campus Map'},
-  {id:'tool_concourse', label: 'Concourse'},
-  {id:'tool_dining', label: 'Dining Menus'},
-  {id:'tool_directories', label: 'Directories'},
-  {id:'tool_exchange', label: 'Exchange'},
-  {id:'tool_gmail', label: 'Gmail'},
-  {id:'tool_hr', label: 'Human Resources'},
-  {id:'tool_insidend', label: 'InsideND'},
-  {id:'tool_irishonline', label: 'Irish Online'},
-  {id:'tool_itunes', label: 'iTunes'},
-  {id:'tool_libraries', label: 'Libraries'},
-  {id:'tool_magazine', label: 'Notre Dame Magazine'},
-  {id:'tool_observer', label: 'Oberserver'},
-  {id:'tool_ocw', label: 'OpenCourseWare'},
-  {id:'tool_oit', label: 'OIT'},
-  {id:'tool_recsports', label: 'RecSports'},
-  {id:'tool_registrar', label: 'Registrar'},
-  {id:'tool_tour', label: 'Campus Tour'},
-  {id:'tool_videochannel', label: 'Video Channel'},
-  {id:'tool_webcams', label: 'Webcams'},
-  {id:'tool_webfile', label: 'WebFile'},
-  {id:'tool_youtube', label: 'YouTube'},
-  {id:'tool_victorymarch', label: 'Victory March'},
-  {id:'tool_search', label: 'Search'}
-];
 
 function loadOptions() {
   var list = '';
 
-  for(i=0; i<items.length; i++) {
-    var id = items[i].id;
-    var label = items[i].label;
-    console.log(id);
+  for(i=0; i<Items.length; i++) {
+    var id = Items[i].id;
+    var label = Items[i].label;
     var checked = (typeof(localStorage[id]) == 'undefined' || localStorage[id] == 'on') ? 'checked="checked"' : '';
+    
     list += '<li><input type="checkbox" id="'+id+'" '+checked+' onclick="toggleOption(this)"><label for="'+id+'">'+label+'</label></li>';
   }
   document.getElementById('toolbar-options').innerHTML = list;
