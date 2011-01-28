@@ -2,8 +2,8 @@
 <?xml-stylesheet href="chrome://nddotedutoolbar/skin/overlay.css" type="text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://nddotedutoolbar/locale/overlay.dtd">
 <overlay id="nddotedutoolbar-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script src="overlay.js"/>
-  <script src="ff-overlay.js"/>
+  <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/config.js" />
+  <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/toolbar.js" />
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="nddotedutoolbar-strings" src="chrome://nddotedutoolbar/locale/overlay.properties"/>
@@ -27,19 +27,7 @@
   </toolbarpalette>
 
   <toolbox id="navigator-toolbox">
-    <toolbar class="chromeclass-toolbar" toolbarname="&nddotedutoolbarToolbar.name;" customizable="true" id="nddotedutoolbar-toolbar">
-      <label value="&nddotedutoolbarToolbar.label;"/>
-      <ul>
-        <li id="nddotedu"><a href="http://nd.edu">ND.edu</a></li>
-        <li id="ndcalendar"><a href="http://calendar.nd.edu">Calendar of Events</a></li>
-        <li id="ndaccal"><a href="http://registrar.nd.edu/academic_calendar.shtml">Academic Calendar</a></li>
-        <li id="ndinsidend"><a href="http://inside.nd.edu/">InsideND</a></li>
-        <li id="ndgmail"><a href="http://gmail.nd.edu/">GMail</a></li>
-        <li id="ndowa"><a href="https://owa.nd.edu/">Webmail</a></li>
-        <li id="nddirectory"><a href="http://apps.nd.edu/webdirectory/directory.cfm">Directories</a></li>
-      </ul>
-    </toolbar>
+    <toolbar class="chromeclass-toolbar" toolbarname="&nddotedutoolbarToolbar.name;" customizable="true" id="nddotedutoolbar-toolbar"></toolbar>
   </toolbox>
-
 
 </overlay>
