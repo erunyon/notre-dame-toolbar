@@ -29,20 +29,3 @@ var Items = [
   {id:'tool_audio', label:'Victory March', href:false, type:'custom'},
   {id:'tool_search', label:'Search', href:false, type:'custom'}
 ];
-// ConsoleService: Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService);
-// Log: function(aMessage) {
-// 	this.ConsoleService.logStringMessage('Tut_Toolbar: ' + aMessage);
-// }
-// this.Log("The value of the URL variable is: ");
-
-// nddotedutoolbar.onFirefoxLoad = function(event) {
-//   document.getElementById("contentAreaContextMenu")
-//           .addEventListener("popupshowing", function (e){ nddotedutoolbar.showFirefoxContextMenu(e); }, false);
-// };
-
-// nddotedutoolbar.showFirefoxContextMenu = function(event) {
-//   // show or hide the menuitem based on what the context menu is on
-//   document.getElementById("context-nddotedutoolbar").hidden = gContextMenu.onImage;
-// };
-
-// window.addEventListener("load", nddotedutoolbar.onFirefoxLoad, false);

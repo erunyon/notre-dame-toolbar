@@ -21,9 +21,9 @@
   </popup>
 
   <toolbarpalette id="BrowserToolbarPalette">
-  <toolbarbutton id="nddotedutoolbar-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-    label="&nddotedutoolbarToolbarButton.label;" tooltiptext="&nddotedutoolbarToolbarButton.tooltip;"
-    oncommand="nddotedutoolbar.onToolbarButtonCommand()"/>
+    <toolbarbutton id="nddotedutoolbar-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+      label="&nddotedutoolbarToolbarButton.label;" tooltiptext="&nddotedutoolbarToolbarButton.tooltip;"
+      oncommand="nddotedutoolbar.onToolbarButtonCommand()"/>
   </toolbarpalette>
 
   <toolbox id="navigator-toolbox">
