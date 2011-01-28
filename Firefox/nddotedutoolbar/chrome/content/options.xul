@@ -2,14 +2,40 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <!DOCTYPE prefwindow SYSTEM "chrome://nddotedutoolbar/locale/options.dtd">
 <prefwindow id="nddotedutoolbar-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/config.js" />
   <prefpane id="pane1" label="&pane1.title;">
     <preferences>
-      <preference id="boolpref1" name="extensions.nddotedutoolbar.boolpref" type="bool"/>
-      <preference id="intpref1" name="extensions.nddotedutoolbar.intpref" type="int"/>
-      <preference id="stringpref1" name="extensions.nddotedutoolbar.stringpref" type="string"/> <!-- note that this is only an ASCII string - use unichar for unicode strings -->
+      <preference id="boolpref1" name="extensions.nddotedutoolbar.tool_nddotedu" type="bool" value="true"/>
+      <preference id="boolpref2" name="extensions.nddotedutoolbar.tool_acadcal" type="bool"/>
+      <preference id="boolpref3" name="extensions.nddotedutoolbar.tool_bookstore" type="bool"/>
+      <preference id="boolpref4" name="extensions.nddotedutoolbar.tool_careercenter" type="bool"/>
+      <preference id="boolpref5" name="extensions.nddotedutoolbar.tool_calendar" type="bool" value="true"/>
+      <preference id="boolpref6" name="extensions.nddotedutoolbar.tool_campusmap" type="bool" value="true"/>
+      <preference id="boolpref7" name="extensions.nddotedutoolbar.tool_concourse" type="bool"/>
+      <preference id="boolpref8" name="extensions.nddotedutoolbar.tool_dining" type="bool"/>
+      <preference id="boolpref9" name="extensions.nddotedutoolbar.tool_directories" type="bool" value="true"/>
+      <preference id="boolpref10" name="extensions.nddotedutoolbar.tool_exchange" type="bool" value="true"/>
+      <preference id="boolpref11" name="extensions.nddotedutoolbar.tool_gmail" type="bool" value="true"/>
+      <preference id="boolpref12" name="extensions.nddotedutoolbar.tool_hr" type="bool"/>
+      <preference id="boolpref13" name="extensions.nddotedutoolbar.tool_insidend" type="bool" value="true"/>
+      <preference id="boolpref14" name="extensions.nddotedutoolbar.tool_irishonline" type="bool"/>
+      <preference id="boolpref15" name="extensions.nddotedutoolbar.tool_itunes" type="bool"/>
+      <preference id="boolpref16" name="extensions.nddotedutoolbar.tool_libraries" type="bool" value="true"/>
+      <preference id="boolpref17" name="extensions.nddotedutoolbar.tool_magazine" type="bool"/>
+      <preference id="boolpref18" name="extensions.nddotedutoolbar.tool_observer" type="bool" value="true"/>
+      <preference id="boolpref19" name="extensions.nddotedutoolbar.tool_ocw" type="bool"/>
+      <preference id="boolpref20" name="extensions.nddotedutoolbar.tool_oit" type="bool"/>
+      <preference id="boolpref21" name="extensions.nddotedutoolbar.tool_recsports" type="bool"/>
+      <preference id="boolpref22" name="extensions.nddotedutoolbar.tool_registrar" type="bool"/>
+      <preference id="boolpref23" name="extensions.nddotedutoolbar.tool_tour" type="bool"/>
+      <preference id="boolpref24" name="extensions.nddotedutoolbar.tool_videochannel" type="bool"/>
+      <preference id="boolpref25" name="extensions.nddotedutoolbar.tool_webcams" type="bool"/>
+      <preference id="boolpref26" name="extensions.nddotedutoolbar.tool_webfile" type="bool"/>
+      <preference id="boolpref27" name="extensions.nddotedutoolbar.tool_youtube" type="bool"/>
+      <preference id="boolpref28" name="extensions.nddotedutoolbar.tool_audio" type="bool" value="true"/>
+      <preference id="boolpref29" name="extensions.nddotedutoolbar.tool_search" type="bool" value="true"/>
     </preferences>
-    <checkbox id="checkboolpref" preference="boolpref1" label="&checkboolpref.label;" accesskey="&checkboolpref.accesskey;"/>
-    <label accesskey="&intpref.accesskey;" control="textintpref">&intpref.label;</label><textbox id="textintpref" preference="intpref1"/>
-    <label accesskey="&stringpref.accesskey;" control="textstringpref">&stringpref.label;</label><textbox id="textstringpref" preference="stringpref1"/>
+    <div id="checkboxes"></div>
+    <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/options.js" />
   </prefpane>
 </prefwindow>

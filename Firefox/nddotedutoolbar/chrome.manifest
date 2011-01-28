@@ -4,4 +4,4 @@ locale    nddotedutoolbar   en-US         chrome/locale/en-US/
 
 
 overlay   chrome://browser/content/browser.xul   chrome://nddotedutoolbar/content/toolbar.xul
-style chrome://global/content/customizeToolbar.xul chrome://nddotedutoolbar/skin/overlay.css
+style chrome://global/content/customizeToolbar.xul chrome://nddotedutoolbar/skin/toolbar.css

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://nddotedutoolbar/skin/toolbar.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://nddotedutoolbar/locale/overlay.dtd">
+<overlay id="nddotedutoolbar-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/config.js" />
+  <script type="application/x-javascript" src="chrome://nddotedutoolbar/content/toolbar.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="nddotedutoolbar-strings" src="chrome://nddotedutoolbar/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="nddotedutoolbar-hello" label="&nddotedutoolbar.label;" oncommand="nddotedutoolbar.onMenuItemCommand(event);"/>
+  </menupopup>
+
+  <popup id="contentAreaContextMenu">
+    <menuitem id="context-nddotedutoolbar" label="&nddotedutoolbarContext.label;"
+              accesskey="&nddotedutoolbarContext.accesskey;"
+              insertafter="context-stop"
+              oncommand="nddotedutoolbar.onMenuItemCommand(event)"/>
+  </popup>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="nddotedutoolbar-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+      label="&nddotedutoolbarToolbarButton.label;" tooltiptext="&nddotedutoolbarToolbarButton.tooltip;"
+      oncommand="nddotedutoolbar.onToolbarButtonCommand()"/>
+  </toolbarpalette>
+
+  <toolbox id="navigator-toolbox">
+    <toolbar class="chromeclass-toolbar" toolbarname="&nddotedutoolbarToolbar.name;" customizable="true" id="nddotedutoolbar-toolbar"></toolbar>
+  </toolbox>
+
+</overlay>

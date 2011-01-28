@@ -64,13 +64,15 @@ var nddotedutoolbar = {
 			var item = Items[i];
 			
 			if(item.type == 'link') {
-				// Create a new menu item to be added
-				var tempItem = document.createElement("toolbarbutton");
-				tempItem.setAttribute("label", item.label);
-				tempItem.setAttribute("tooltiptext", item.label);
-				tempItem.setAttribute("oncommand", "nddotedutoolbar.LoadURL('"+ item.href +"')");
-				tempItem.setAttribute("class", "nddotedutoolbar-toolbar-button");
-				menu.appendChild(tempItem);
+				// if(defprefs.getBoolPref(item.id == true)) {
+					// Create a new menu item to be added
+					var tempItem = document.createElement("toolbarbutton");
+					tempItem.setAttribute("label", item.label);
+					tempItem.setAttribute("tooltiptext", item.label);
+					tempItem.setAttribute("oncommand", "nddotedutoolbar.LoadURL('"+ item.href +"')");
+					tempItem.setAttribute("class", "nddotedutoolbar-toolbar-button");
+					menu.appendChild(tempItem);
+				// }
 			} else {
 				if(item.id == 'tool_search') {
 					var tempItem = document.createElement("textbox");

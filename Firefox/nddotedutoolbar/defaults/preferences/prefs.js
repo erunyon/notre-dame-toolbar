@@ -1,6 +1,29 @@
-pref("extensions.nddotedutoolbar.boolpref", false);
-pref("extensions.nddotedutoolbar.intpref", 0);
-pref("extensions.nddotedutoolbar.stringpref", "A string");
-
-// https://developer.mozilla.org/en/Localizing_extension_descriptions
-pref("extensions.nddotedu@weedygarden.net.description", "chrome://nddotedutoolbar/locale/overlay.properties");
+// pref("extensions.nddotedutoolbar.tool_nddotedu", true);
+// pref("extensions.nddotedutoolbar.tool_acadcal", false);
+// pref("extensions.nddotedutoolbar.tool_bookstore", false);
+// pref("extensions.nddotedutoolbar.tool_careercenter", false);
+// pref("extensions.nddotedutoolbar.tool_calendar", true);
+// pref("extensions.nddotedutoolbar.tool_campusmap", true);
+// pref("extensions.nddotedutoolbar.tool_concourse", false);
+// pref("extensions.nddotedutoolbar.tool_dining", false);
+// pref("extensions.nddotedutoolbar.tool_directories", true);
+// pref("extensions.nddotedutoolbar.tool_exchange", true);
+// pref("extensions.nddotedutoolbar.tool_gmail", true);
+// pref("extensions.nddotedutoolbar.tool_hr", false);
+// pref("extensions.nddotedutoolbar.tool_insidend", true);
+// pref("extensions.nddotedutoolbar.tool_irishonline", false);
+// pref("extensions.nddotedutoolbar.tool_itunes", false);
+// pref("extensions.nddotedutoolbar.tool_libraries", true);
+// pref("extensions.nddotedutoolbar.tool_magazine", false);
+// pref("extensions.nddotedutoolbar.tool_observer", true);
+// pref("extensions.nddotedutoolbar.tool_ocw", false);
+// pref("extensions.nddotedutoolbar.tool_oit", false);
+// pref("extensions.nddotedutoolbar.tool_recsports", false);
+// pref("extensions.nddotedutoolbar.tool_registrar", false);
+// pref("extensions.nddotedutoolbar.tool_tour", false);
+// pref("extensions.nddotedutoolbar.tool_videochannel", false);
+// pref("extensions.nddotedutoolbar.tool_webcams", false);
+// pref("extensions.nddotedutoolbar.tool_webfile", false);
+// pref("extensions.nddotedutoolbar.tool_youtube", false);
+// pref("extensions.nddotedutoolbar.tool_audio", true);
+// pref("extensions.nddotedutoolbar.tool_search", true);
