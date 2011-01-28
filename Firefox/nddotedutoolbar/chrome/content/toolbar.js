@@ -1,3 +1,10 @@
+// Get the "extensions.myext." branch
+var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+var usrprefs = prefs.getBranch("extensions.nddotedutoolbar.");
+var defprefs = prefs.getDefaultBranch("extensions.nddotedutoolbar.");
+// var value = prefs.getBoolPref("typeaheadfind"); // get a pref (accessibility.typeaheadfind)
+// prefs.setBoolPref("typeaheadfind", !value); // set a pref (accessibility.typeaheadfind)
+
 var nddotedutoolbar = {
   onLoad: function() {
     // initialization code
@@ -90,3 +97,40 @@ var nddotedutoolbar = {
 };
 
 window.addEventListener("load", nddotedutoolbar.onLoad, false);
+
+function PrefListener(branchName, func) {
+    var prefService = Components.classes["@mozilla.org/preferences-service;1"]
+                                .getService(Components.interfaces.nsIPrefService);
+    var branch = prefService.getBranch(branchName);
+    branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+
+    this.register = function() {
+        branch.addObserver("", this, false);
+        branch.getChildList("", { })
+              .forEach(function (name) { func(branch, name); });
+    };
+
+    this.unregister = function unregister() {
+        if (branch)
+            branch.removeObserver("", this);
+    };
+
+    this.observe = function(subject, topic, data) {
+        if (topic == "nsPref:changed")
+            func(branch, data);
+    };
+}
+
+var myListener = new PrefListener("extensions.nddotedutoolbar.",
+	function(branch, name) {
+		nddotedutoolbar.onLoad();
+		// switch (name) {
+		//     case "pref1":
+		//         // extensions.myextension.pref1 was changed
+		//         break;
+		//     case "pref2":
+		//         // extensions.myextension.pref2 was changed
+		//         break;
+		// }
+});
+myListener.register();
